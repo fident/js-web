@@ -19,13 +19,13 @@ fidentEmbedded.listener = function (evn) {
     if (evn.isTrusted) {
         if (evn.data == fidentEmbedded.loginKey) {
             // User did login (token is now set)
-            if (fidentEmbedded.callback != null) {
+            if (fidentEmbedded.callback !== null) {
                 fidentEmbedded.callback();
             }
         } else if (evn.data == fidentEmbedded.mfaKey) {
             // User requires MFA to complete login (forward user to Fident MFA)
-            window.location.href = (fidentEmbedded.serviceURL
-                + fidentEmbedded.mfaPath + "?" +
+            window.location.href = (fidentEmbedded.serviceURL +
+                fidentEmbedded.mfaPath + "?" +
                 fidentEmbedded.destinationParam + "=" +
                 window.location.href);
         }
