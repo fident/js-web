@@ -1,5 +1,5 @@
-# jsfidentweb
-Front-end helpers for fident services
+# js-web
+Front-end helpers for Fident services
 
 #### Embedded SSO
 Use this helper to embed SSO login buttons on your page, clicking these will log the user directly into your app automating the account creation process.
